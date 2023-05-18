@@ -1,0 +1,15 @@
+<ul>
+  <li *ngFor="let product of products">
+    <a routerLink="/product/{{product.id}}">
+      <img [src]="product.imageUrl" [alt]="product.name" />
+      <div class="name">
+        {{product.name}}
+      </div>
+      <span class="favorite {{product.favorite?'':'not'}}">
+        ❤
+      </span>
+
+      
+    </a>
+  </li>
+</ul>
